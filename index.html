@@ -417,6 +417,130 @@
       margin: 5px 0;
     }
 
+    /* Community Protocol Styles */
+    .protocol-container {
+      display: grid;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .protocol-section {
+      background: white;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      border-left: 4px solid #3498db;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .protocol-section:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .protocol-title {
+      color: #2c3e50;
+      font-size: 1.4em;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #ecf0f1;
+    }
+
+    .protocol-content {
+      margin-top: 20px;
+    }
+
+    .do-dont-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .do-section, .dont-section {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+      border-left: 4px solid transparent;
+    }
+
+    .do-section {
+      border-left-color: #27ae60;
+      background: linear-gradient(135deg, #f0fff4, #e8fce8);
+    }
+
+    .dont-section {
+      border-left-color: #e74c3c;
+      background: linear-gradient(135deg, #fff5f5, #ffeaea);
+    }
+
+    .do-title {
+      color: #27ae60;
+      font-size: 1.1em;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+    }
+
+    .dont-title {
+      color: #e74c3c;
+      font-size: 1.1em;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+    }
+
+    .protocol-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .protocol-list li {
+      padding: 8px 0;
+      padding-left: 20px;
+      position: relative;
+      color: #34495e;
+      line-height: 1.5;
+    }
+
+    .do-section .protocol-list li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: #27ae60;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    .dont-section .protocol-list li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: #e74c3c;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    .single-section {
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      padding: 20px;
+      border-radius: 10px;
+      border-left: 4px solid #3498db;
+    }
+
+    .single-section li::before {
+      content: '📌';
+      position: absolute;
+      left: 0;
+      font-size: 1.1em;
+    }
+
     /* Responsive design */
     @media (max-width: 768px) {
       .nav-menu {
@@ -477,6 +601,19 @@
       footer {
         padding: 30px 0 15px 0;
       }
+
+      .do-dont-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .protocol-title {
+        font-size: 1.2em;
+      }
+
+      .protocol-section {
+        padding: 20px;
+      }
     }
   </style>
 </head>
@@ -487,11 +624,11 @@
   <div class="nav-container">
     <div class="logo">
       🏢 <span>Avidipta LIG & MIG</span>
-    </div>
-    <ul class="nav-menu">
+    </div>    <ul class="nav-menu">
       <li><a href="#" class="nav-link active" data-section="home">Home</a></li>
       <li><a href="#" class="nav-link" data-section="about">About Us</a></li>
       <li><a href="#" class="nav-link" data-section="contacts">Useful Contacts</a></li>
+      <li><a href="#" class="nav-link" data-section="protocol">Community Protocol</a></li>
       <li><a href="#" class="nav-link" data-section="notices">Notices</a></li>
     </ul>
     <div class="menu-toggle">
@@ -593,6 +730,173 @@
       </div>
     </div>
   </div>
+  <!-- Community Protocol Section -->
+  <div class="section" id="protocol">
+    <h2>Community Protocol</h2>
+    <div style="text-align: center; margin-bottom: 30px;">
+      <h3 style="color: #27ae60; font-size: 1.5em; margin-bottom: 10px;">LET'S MAKE LIFE BETTER</h3>
+    </div>
+    
+    <div class="protocol-container">
+      <!-- Common Areas -->
+      <div class="protocol-section">
+        <h3 class="protocol-title">🏢 COMMON AREAS</h3>
+        <div class="protocol-content">
+          <div class="do-dont-container">
+            <div class="do-section">
+              <h4 class="do-title">✅ Do's</h4>
+              <ul class="protocol-list">
+                <li>Respect everybody's right, dignity and privacy</li>
+                <li>Maintain cleanliness & calm</li>
+                <li>Use dustbins</li>
+                <li>Don't keep garbage outside the flat once housekeeping staff has collected it</li>
+                <li>Help neighbours</li>
+                <li>Teach your child to refrain himself/herself from playing such outdoor games that prone to damage others property like window panes/cars etc.</li>
+              </ul>
+            </div>
+            <div class="dont-section">
+              <h4 class="dont-title">❌ Don'ts</h4>
+              <ul class="protocol-list">
+                <li>Don't occupy common spaces like lobbies, staircases with own belongings</li>
+                <li>Don't throw things out of window</li>
+                <li>Don't disturb neighbours by creating noise/ playing sound system loudly</li>
+                <li>Don't drop water from wet clothes or plants</li>
+                <li>Don't allow children play beside parking spaces</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lifts/Elevators -->
+      <div class="protocol-section">
+        <h3 class="protocol-title">🛗 LIFTS / ELEVATORS</h3>
+        <div class="protocol-content">
+          <div class="do-dont-container">
+            <div class="do-section">
+              <h4 class="do-title">✅ Do's</h4>
+              <ul class="protocol-list">
+                <li>Use properly</li>
+                <li>Maintain cleanliness</li>
+                <li>Ensure safety</li>
+              </ul>
+            </div>
+            <div class="dont-section">
+              <h4 class="dont-title">❌ Don'ts</h4>
+              <ul class="protocol-list">
+                <li>Don't scratch or damage</li>
+                <li>Don't use incase of fire incident</li>
+                <li>Don't forget to switch off the fan if you are the last person to leave</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pets -->
+      <div class="protocol-section">
+        <h3 class="protocol-title">🐕 PETS</h3>
+        <div class="protocol-content">
+          <div class="do-dont-container">
+            <div class="do-section">
+              <h4 class="do-title">✅ Do's</h4>
+              <ul class="protocol-list">
+                <li>Pets should have valid license from KMC</li>
+                <li>Should be duly vaccinated</li>
+                <li>Should be musked & harnessed /on-leashed in public places</li>
+                <li>Should use Service Lifts to carry pets</li>
+              </ul>
+            </div>
+            <div class="dont-section">
+              <h4 class="dont-title">❌ Don'ts</h4>
+              <ul class="protocol-list">
+                <li>No peeing or pooping in common areas else please clean</li>
+                <li>Pets shouldn't be left alone for long hours</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fire Safety -->
+      <div class="protocol-section">
+        <h3 class="protocol-title">🔥 FIRE SAFETY</h3>
+        <div class="protocol-content">
+          <div class="do-dont-container">
+            <div class="do-section">
+              <h4 class="do-title">✅ Do's</h4>
+              <ul class="protocol-list">
+                <li>Be aware of fire safety</li>
+                <li>Be more careful about burning gas and puja flames</li>
+                <li>Periodically check Gas gadgets</li>
+                <li>Use staircase in case of fire</li>
+                <li>Be aware about the nearest Fire Refuge</li>
+                <li>Know the usage of Fire fighting equipments</li>
+                <li>Keep the lobby & staircase free for emergency movement</li>
+              </ul>
+            </div>
+            <div class="dont-section">
+              <h4 class="dont-title">❌ Don'ts</h4>
+              <ul class="protocol-list">
+                <li>Don't panic</li>
+                <li>Don't use lift in case of Fire</li>
+                <li>Don't keep gas cylinders and inflammable items in the lobbies and staircases</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Parking -->
+      <div class="protocol-section">
+        <h3 class="protocol-title">🚗 PARKING</h3>
+        <div class="protocol-content">
+          <div class="do-section">
+            <h4 class="do-title">✅ Do's</h4>
+            <ul class="protocol-list">
+              <li>All four wheelers and two wheelers should have proper stickers with parking space number</li>
+              <li>Cars without stickers will be denied entry</li>
+              <li>Keep cars in proper/ alloted proper space</li>
+              <li>Take permission for guest parking prior through mail</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Transfer of Ownership -->
+      <div class="protocol-section">
+        <h3 class="protocol-title">📋 TRANSFER OF OWNERSHIP</h3>
+        <div class="protocol-content">
+          <ul class="protocol-list single-section">
+            <li>Always inform the Association office through writing, whoever sells or buys or otherwise transfers his apartment</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Repair/Civil Works -->
+      <div class="protocol-section">
+        <h3 class="protocol-title">🔨 REPAIR / CIVIL WORKS</h3>
+        <div class="protocol-content">
+          <div class="do-dont-container">
+            <div class="do-section">
+              <h4 class="do-title">✅ Do's</h4>
+              <ul class="protocol-list">
+                <li>Damages occurred in common areas, lobbies only will be repaired by the Association /Board</li>
+                <li>Should inform the Association office for renovation or modification inside the apartment</li>
+              </ul>
+            </div>
+            <div class="dont-section">
+              <h4 class="dont-title">❌ Don'ts</h4>
+              <ul class="protocol-list">
+                <li>No structural change can be done which can cause threat to the building</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Notices Section -->
   <div class="section" id="notices">
     <h2>Notices & Circulars</h2>
